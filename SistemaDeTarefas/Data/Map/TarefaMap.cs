@@ -8,10 +8,16 @@ namespace SistemaDeTarefas.Data.Map
     {
         public void Configure(EntityTypeBuilder<TarefaModel> builder)
         {
-            builder.HasKey(x => x.Id);
-            builder.Property(x => x.Name).IsRequired().HasMaxLength(255);
-            builder.Property(x => x.Description).HasMaxLength(1000);
-            builder.Property(x => x.Status).IsRequired();
+            builder.HasKey(task => task.Id);
+            builder.Property(task => task.Name).IsRequired().HasMaxLength(255);
+            builder.Property(task => task.Description).HasMaxLength(1000);
+            builder.Property(task => task.Status).IsRequired();
+            builder.Property(task => task.UsuarioId).IsRequired(false);
+
+            builder.Property(task => task.CreatedAt).IsRequired();
+            builder.Property(task => task.UpdatedAt).IsRequired();
+
+            builder.HasOne(task => task.Usuario);
         }
     }
 }

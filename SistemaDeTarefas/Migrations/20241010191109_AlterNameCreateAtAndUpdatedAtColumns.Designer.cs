@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SistemaDeTarefas.Data;
@@ -11,9 +12,11 @@ using SistemaDeTarefas.Data;
 namespace SistemaDeTarefas.Migrations
 {
     [DbContext(typeof(SistemaTarefasDBContext))]
-    partial class SistemaTarefasDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241010191109_AlterNameCreateAtAndUpdatedAtColumns")]
+    partial class AlterNameCreateAtAndUpdatedAtColumns
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,10 +105,15 @@ namespace SistemaDeTarefas.Migrations
             modelBuilder.Entity("SistemaDeTarefas.Models.TarefaModel", b =>
                 {
                     b.HasOne("SistemaDeTarefas.Models.UsuarioModel", "Usuario")
-                        .WithMany()
+                        .WithMany("Tarefas")
                         .HasForeignKey("UsuarioId");
 
                     b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("SistemaDeTarefas.Models.UsuarioModel", b =>
+                {
+                    b.Navigation("Tarefas");
                 });
 #pragma warning restore 612, 618
         }

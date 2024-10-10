@@ -18,14 +18,15 @@ namespace SistemaDeTarefas
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            // Abrir conexão com o banco de dados
+            // Abrir conexï¿½o com o banco de dados
             builder.Services
                 .AddDbContext<SistemaTarefasDBContext>(
                     options => options.UseNpgsql(builder.Configuration.GetConnectionString("Database"))
                 );
 
-            // Injeção de dependências Repositories
+            // Injeï¿½ï¿½o de dependï¿½ncias Repositories
             builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            builder.Services.AddScoped<ITarefaRepository, TarefaRepository>();
 
             var app = builder.Build();
 

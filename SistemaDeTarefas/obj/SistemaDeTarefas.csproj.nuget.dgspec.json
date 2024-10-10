@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gesaias\\dev\\Courses\\DotNet\\SistemaDeTarefas\\SistemaDeTarefas\\SistemaDeTarefas.csproj": {}
+    "c:\\Users\\gesaias\\dev\\Courses\\DotNet\\SistemaDeTarefas\\SistemaDeTarefas\\SistemaDeTarefas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gesaias\\dev\\Courses\\DotNet\\SistemaDeTarefas\\SistemaDeTarefas\\SistemaDeTarefas.csproj": {
+    "c:\\Users\\gesaias\\dev\\Courses\\DotNet\\SistemaDeTarefas\\SistemaDeTarefas\\SistemaDeTarefas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gesaias\\dev\\Courses\\DotNet\\SistemaDeTarefas\\SistemaDeTarefas\\SistemaDeTarefas.csproj",
+        "projectUniqueName": "c:\\Users\\gesaias\\dev\\Courses\\DotNet\\SistemaDeTarefas\\SistemaDeTarefas\\SistemaDeTarefas.csproj",
         "projectName": "SistemaDeTarefas",
-        "projectPath": "C:\\Users\\gesaias\\dev\\Courses\\DotNet\\SistemaDeTarefas\\SistemaDeTarefas\\SistemaDeTarefas.csproj",
+        "projectPath": "c:\\Users\\gesaias\\dev\\Courses\\DotNet\\SistemaDeTarefas\\SistemaDeTarefas\\SistemaDeTarefas.csproj",
         "packagesPath": "C:\\Users\\gesaias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gesaias\\dev\\Courses\\DotNet\\SistemaDeTarefas\\SistemaDeTarefas\\obj\\",
+        "outputPath": "c:\\Users\\gesaias\\dev\\Courses\\DotNet\\SistemaDeTarefas\\SistemaDeTarefas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
