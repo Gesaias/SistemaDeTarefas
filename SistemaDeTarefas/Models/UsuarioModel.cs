@@ -1,5 +1,8 @@
-﻿namespace SistemaDeTarefas.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SistemaDeTarefas.Models
 {
+    [Table("usuario")]
     public class UsuarioModel
     {
         public int Id { get; set; }

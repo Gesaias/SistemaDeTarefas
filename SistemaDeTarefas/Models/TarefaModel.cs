@@ -1,7 +1,9 @@
-﻿using SistemaDeTarefas.Enums;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using SistemaDeTarefas.Enums;
 
 namespace SistemaDeTarefas.Models
 {
+    [Table("tarefa")]
     public class TarefaModel
     {
         public int Id { get; set; }

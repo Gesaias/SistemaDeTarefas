@@ -17,7 +17,7 @@ namespace SistemaDeTarefas.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<UsuarioModel>>> BuscarTodosUsuarios() 
+        public async Task<ActionResult<List<UsuarioModel>>> BuscarTodosUsuarios()
         {
             List<UsuarioModel> usuarios = await _usuarioRepository.BuscarTodosUsuarios();
             return Ok(usuarios);
@@ -32,7 +32,7 @@ namespace SistemaDeTarefas.Controllers
 
         [HttpPost]
         public async Task<ActionResult<UsuarioModel>> Cadastrar([FromBody] UsuarioModel usuarioModel)
-        { 
+        {
             UsuarioModel usuario = await _usuarioRepository.Adicionar(usuarioModel);
             return Ok(usuario);
         }

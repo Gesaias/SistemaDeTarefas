@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 using SistemaDeTarefas.Data.Map;
 using SistemaDeTarefas.Models;
 
@@ -10,7 +11,6 @@ namespace SistemaDeTarefas.Data
             : base(options)
         {
         }
-
         public DbSet<UsuarioModel> Usuarios { get; set; }
         public DbSet<TarefaModel> Tarefas{ get; set; }
 
