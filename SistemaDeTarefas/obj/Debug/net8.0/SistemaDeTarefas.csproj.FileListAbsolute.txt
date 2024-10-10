@@ -109,3 +109,5 @@ C:\Users\gesaias\dev\Courses\DotNet\SistemaDeTarefas\SistemaDeTarefas\obj\Debug\
 C:\Users\gesaias\dev\Courses\DotNet\SistemaDeTarefas\SistemaDeTarefas\obj\Debug\net8.0\SistemaDeTarefas.pdb
 C:\Users\gesaias\dev\Courses\DotNet\SistemaDeTarefas\SistemaDeTarefas\obj\Debug\net8.0\SistemaDeTarefas.genruntimeconfig.cache
 C:\Users\gesaias\dev\Courses\DotNet\SistemaDeTarefas\SistemaDeTarefas\obj\Debug\net8.0\ref\SistemaDeTarefas.dll
+c:\Users\gesaias\dev\Courses\DotNet\SistemaDeTarefas\SistemaDeTarefas\bin\Debug\net8.0\Refit.dll
+c:\Users\gesaias\dev\Courses\DotNet\SistemaDeTarefas\SistemaDeTarefas\bin\Debug\net8.0\Refit.HttpClientFactory.dll

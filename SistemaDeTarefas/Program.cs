@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Refit;
 using SistemaDeTarefas.Data;
+using SistemaDeTarefas.Integracao;
+using SistemaDeTarefas.Integracao.Interfaces;
+using SistemaDeTarefas.Integracao.Refit;
 using SistemaDeTarefas.Repositories;
 using SistemaDeTarefas.Repositories.Interfaces;
 
@@ -18,15 +22,22 @@ namespace SistemaDeTarefas
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            // Abrir conex�o com o banco de dados
+            // Abrir conexao com o banco de dados
             builder.Services
                 .AddDbContext<SistemaTarefasDBContext>(
                     options => options.UseNpgsql(builder.Configuration.GetConnectionString("Database"))
                 );
 
-            // Inje��o de depend�ncias Repositories
+            // Injecao de dependencias
             builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             builder.Services.AddScoped<ITarefaRepository, TarefaRepository>();
+            builder.Services.AddScoped<IViaCepIntegracao, ViaCepIntegracao>();
+
+            // Refit
+            builder.Services.AddRefitClient<IViaCepIntegracaoRefit>().ConfigureHttpClient(c =>
+            {
+                c.BaseAddress = new Uri("https://viacep.com.br");
+            });
 
             var app = builder.Build();
 
